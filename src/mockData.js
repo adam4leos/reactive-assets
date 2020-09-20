@@ -17,14 +17,14 @@ const createAsset = (assetId, assetType) => {
 
 const getAllAssets = (n) => {
   const result = [];
-  for (let i = 0; i < n; i++) {
+  for (let i = 1; i <= n; i++) {
     result.push(createAsset(i, 'Stock'));
     result.push(createAsset(i + n, 'Currency'));
   }
   return result;
 };
 
-const assets = getAllAssets(200);
+const assets = getAllAssets(2);
 const timeObservable = interval(1000);
 
 export const mockData = Observable.create((ob) => {

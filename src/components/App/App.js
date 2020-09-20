@@ -1,6 +1,6 @@
 import React from 'react';
 
-import AssetTable from '../AssetTable/AssetTable';
+import { AssetTable } from '../AssetTable/AssetTable';
 import './App.css';
 
 function App() {

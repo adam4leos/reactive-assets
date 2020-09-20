@@ -1,11 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
 
-import App from './App/App';
+import assetsMiddleWare from './redux/middleware/index';
+import rootReducer from './redux/index';
+import App from './components/App/App';
 
-ReactDOM.render(
-  <React.StrictMode>
+const middleware = applyMiddleware(assetsMiddleWare);
+const store = createStore(rootReducer, middleware);
+
+render(
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root'),
 );

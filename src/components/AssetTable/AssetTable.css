@@ -1,0 +1,21 @@
+table {
+  width: 100%;
+  padding: 100px;
+  background: #f3ebeb;
+  border: 1px solid #7d2fca;
+  border-radius: 5px;
+}
+
+th {
+  cursor: pointer;
+  user-select: none;
+  background: #f1a8a8;
+  padding: 5px 3px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+td {
+  border-bottom: 1px dashed red;
+  padding: 6px;
+}
